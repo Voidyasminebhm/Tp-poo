@@ -2,7 +2,6 @@ public class Categorie {
     private String nom;
     private String couleur;
 
-
     public String getNom () {
         return this.nom;
     }
@@ -18,5 +17,4 @@ public class Categorie {
     public void setCouleur (String couleur) {
         this.couleur = couleur;
     }
-    
 }

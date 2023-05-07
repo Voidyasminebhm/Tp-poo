@@ -1,24 +1,32 @@
-import java.util.Locale.Category;
+
 
 abstract  class Tache {
-    private String nom, dateLimite  ;
-    private int duree ;
-    private int nbPeriode = 1 ;
-    //private Categories categories ;
-    //private Etat etat ;
-    //private Priorite priorite ;
+    private String nom ;
+    private String dateLimite;
+    private int duree;
+    private int nbPeriode = 1;
+    private Categorie categorie;
+    private Etat etat = Etat.notRealized;
+    private Prioritee priorite = Prioritee.Low;
 
-    public void changerEtat() {
-    
+    public void changerEtat(Etat etat) {
+        this.etat = etat;
     }
 
-    public int SetDuree(){
+    public int getDuree(){
         return this.duree;
     }
 
-    public void Afficher() {
-        
+    public void afficher() {
+        System.out.println("Nom: " + nom);
+        System.out.println("Date limite: " + dateLimite);
+        System.out.println("Durée: " + duree);
+        System.out.println("Catégorie: " + categorie.getNom());
+        System.out.println("État: " + etat);
+        System.out.println("Priorité: " + priorite);
     }
+
+  
 
     public void Decomposer() {
         
