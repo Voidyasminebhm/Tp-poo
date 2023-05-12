@@ -2,6 +2,13 @@ public class Simple extends Tache {
     private int nbPeriode;
     private String description;
 
+
+    public Simple(String nom, String dateLimite, int duree, Categorie categorie, Prioritee priorite ,int nbPeriode , String  description){
+        super( nom,  dateLimite,  duree,  categorie,  priorite);
+        this.nbPeriode=nbPeriode;
+        this.description=description;
+
+    }
     public void SetPeriode(int nbPeriode) {
         this.nbPeriode = nbPeriode;
     }
@@ -20,5 +27,11 @@ public class Simple extends Tache {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void afficher(){
+        super.afficher();
+        System.out.println("nbPeriode : "+nbPeriode);   
+        System.out.println("description : "+description);
     }
 }

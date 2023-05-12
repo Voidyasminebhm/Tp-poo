@@ -1,19 +1,29 @@
+abstract class Tache {
 
-
-abstract  class Tache {
-    private String nom ;
+    private String nom;
     private String dateLimite;
-    private int duree;
+    private long duree;
     private int nbPeriode = 1;
     private Categorie categorie;
     private Etat etat = Etat.notRealized;
     private Prioritee priorite = Prioritee.Low;
 
+    public Tache(){
+
+    }
+    public Tache(String nom, String dateLimite, int duree, Categorie categorie, Prioritee priorite) {
+        this.nom = nom;
+        this.dateLimite = dateLimite;
+        this.duree = duree;
+        this.categorie = categorie;
+        this.priorite = priorite;
+    }
+
     public void changerEtat(Etat etat) {
         this.etat = etat;
     }
 
-    public int getDuree(){
+    public long getDuree() {
         return this.duree;
     }
 
@@ -26,23 +36,19 @@ abstract  class Tache {
         System.out.println("Priorité: " + priorite);
     }
 
-  
+    public void decomposer() {
 
-    public void Decomposer() {
-        
     }
 
     public void setTaches() {
-        
+
     }
 
-    public void Evaluer() {
-        
+    public void evaluer() {
+
     }
 
-    public void SetPeriode(int nbPeriode) {
-        
+    public void setPeriode(int nbPeriode) {
+        this.nbPeriode = nbPeriode;
     }
-
-    
 }

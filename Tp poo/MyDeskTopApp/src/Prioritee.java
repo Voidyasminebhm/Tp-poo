@@ -1,5 +1,5 @@
 public enum Prioritee {
     Low,
     Medium,
-    High
+    High,
 }
